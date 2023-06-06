@@ -15,11 +15,7 @@ app = FastAPI()
 logging.basicConfig(level=logging.DEBUG)
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
-origins = [
-    "http://localhost",
-    "http://localhost:3000",  # Update with your React app's URL
-    "http://localhost:3000/upload"
-    # Add more origins if needed
+origins = ["*"
 ]
 
 app.add_middleware(
